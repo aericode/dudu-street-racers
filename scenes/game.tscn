@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3c1w4vr2hu11"]
+[gd_scene load_steps=5 format=3 uid="uid://c3c1w4vr2hu11"]
 
 [ext_resource type="Texture2D" uid="uid://cqfac1vpwwwgl" path="res://assets/background.png" id="1_nsuln"]
 [ext_resource type="PackedScene" uid="uid://b1pmvwotfim7r" path="res://scenes/road_mark.tscn" id="2_5nigw"]
+[ext_resource type="PackedScene" uid="uid://2mdenst8xgo6" path="res://scenes/player.tscn" id="3_ms6ux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4wor"]
 size = Vector2(1155, 87)
@@ -9,7 +10,7 @@ size = Vector2(1155, 87)
 [node name="Game" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
-scale = Vector2(0.599479, 0.599074)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_nsuln")
 centered = false
 
@@ -36,3 +37,6 @@ position = Vector2(0, 759)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoadMarkReseter"]
 position = Vector2(576.5, 177.5)
 shape = SubResource("RectangleShape2D_f4wor")
+
+[node name="Player" parent="." instance=ExtResource("3_ms6ux")]
+position = Vector2(531, 426)
