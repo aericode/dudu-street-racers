@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3c1w4vr2hu11"]
+[gd_scene load_steps=7 format=3 uid="uid://c3c1w4vr2hu11"]
 
 [ext_resource type="Texture2D" uid="uid://cqfac1vpwwwgl" path="res://assets/background.png" id="1_nsuln"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ucli7"]
 [ext_resource type="PackedScene" uid="uid://b1pmvwotfim7r" path="res://scenes/road_mark.tscn" id="2_5nigw"]
+[ext_resource type="Script" path="res://scripts/speed_up_manager.gd" id="2_aflnh"]
 [ext_resource type="PackedScene" uid="uid://2mdenst8xgo6" path="res://scenes/player.tscn" id="3_ms6ux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4wor"]
@@ -10,6 +11,9 @@ size = Vector2(1155, 87)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ucli7")
+
+[node name="SpeedUpManager" type="Node" parent="."]
+script = ExtResource("2_aflnh")
 
 [node name="background" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)

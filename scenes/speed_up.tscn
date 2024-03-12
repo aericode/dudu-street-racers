@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnafm3v6jpg5y"]
+
+[ext_resource type="Script" path="res://scripts/speed_up.gd" id="1_dmi0n"]
+[ext_resource type="Texture2D" uid="uid://ckxrx8ng22p5w" path="res://assets/speed up.png" id="1_nfk2e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrs88"]
+radius = 22.0227
+
+[node name="SpeedUp" type="Node2D"]
+script = ExtResource("1_dmi0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0833333, 0.0833333)
+texture = ExtResource("1_nfk2e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jrs88")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
