@@ -12,7 +12,7 @@ size = Vector2(1155, 87)
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ucli7")
 
-[node name="SpeedUpManager" type="Node" parent="."]
+[node name="Speed_Up_Manager" type="Node" parent="."]
 script = ExtResource("2_aflnh")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -40,3 +40,31 @@ shape = SubResource("RectangleShape2D_f4wor")
 
 [node name="Player" parent="." instance=ExtResource("3_ms6ux")]
 position = Vector2(531, 426)
+
+[node name="Speed_label" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 515.0
+offset_right = 968.0
+offset_bottom = 538.0
+text = "Velocidade:"
+
+[node name="Speed_label2" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 515.0
+offset_right = 968.0
+offset_bottom = 538.0
+text = "Velocidade:"
+
+[node name="Damage_label" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 547.0
+offset_right = 968.0
+offset_bottom = 570.0
+text = "Dano:"
+
+[node name="Damage_label2" type="Label" parent="."]
+offset_left = 865.0
+offset_top = 547.0
+offset_right = 968.0
+offset_bottom = 570.0
+text = "Dano:"

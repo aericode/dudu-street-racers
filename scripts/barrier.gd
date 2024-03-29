@@ -18,7 +18,9 @@ func _on_area_2d_body_entered(body):
 		is_broken = true
 		PlayerVariables.life -= 1
 		sprite.texture = load("res://assets/barrier broken.png")
-		PlayerVariables.speed -= 100
+		
+		PlayerVariables.life -= int(0.8*PlayerVariables.speed)
+		PlayerVariables.speed = int(0.9*PlayerVariables.speed)
 
 func damage_player():
 	pass

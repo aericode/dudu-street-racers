@@ -11,7 +11,7 @@ func _ready():
 	reset_speed_up_timer()
 
 func reset_speed_up_timer():
-	speed_up_timer = rng.randi_range(1500, 2500)
+	speed_up_timer = rng.randi_range(3000, 4000)
 	
 func spawn_speed_up():
 	var horizontal_position = rng.randi_range(485, 670)

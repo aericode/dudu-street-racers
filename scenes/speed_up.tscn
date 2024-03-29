@@ -1,22 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnafm3v6jpg5y"]
 
 [ext_resource type="Script" path="res://scripts/speed_up.gd" id="1_dmi0n"]
-[ext_resource type="Texture2D" uid="uid://ckxrx8ng22p5w" path="res://assets/speed up.png" id="1_nfk2e"]
+[ext_resource type="Texture2D" uid="uid://7x40w3wm2n7v" path="res://assets/bokus.png" id="2_kbm5j"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jrs88"]
-radius = 22.0227
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtpf1"]
+size = Vector2(55, 83)
 
 [node name="SpeedUp" type="Node2D"]
 script = ExtResource("1_dmi0n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0833333, 0.0833333)
-texture = ExtResource("1_nfk2e")
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("2_kbm5j")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_jrs88")
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_rtpf1")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
